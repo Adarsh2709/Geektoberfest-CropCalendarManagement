@@ -1,1 +1,13 @@
-const mongoose=require('mongoose');const s=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User',index:true},activity:{type:mongoose.Schema.Types.ObjectId,ref:'Activity'},title:String,message:String,type:String,isRead:{type:Boolean,default:false}},{timestamps:true});module.exports=mongoose.model('Notification',s);
+const mongoose = require("mongoose");
+const s = new mongoose.Schema(
+  {
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", index: true },
+    activity: { type: mongoose.Schema.Types.ObjectId, ref: "Activity" },
+    title: String,
+    message: String,
+    type: String,
+    isRead: { type: Boolean, default: false },
+  },
+  { timestamps: true },
+);
+module.exports = mongoose.model("Notification", s);

@@ -1,1 +1,8 @@
-const r=require('express').Router(),c=require('../controllers/notificationController'),{protect}=require('../middleware/auth');r.use(protect);r.get('/',c.list);r.patch('/:id/read',c.read);r.patch('/read-all',c.readAll);module.exports=r;
+const r = require("express").Router(),
+  c = require("../controllers/notificationController"),
+  { protect } = require("../middleware/auth");
+r.use(protect);
+r.get("/", c.list);
+r.patch("/:id/read", c.read);
+r.patch("/read-all", c.readAll);
+module.exports = r;

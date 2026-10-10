@@ -1,1 +1,2 @@
-import api from './api'; export const dashboard=()=>api.get('/dashboard');
+import api from "./api";
+export const dashboard = () => api.get("/dashboard");

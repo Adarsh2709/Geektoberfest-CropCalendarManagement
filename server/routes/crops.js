@@ -1,1 +1,10 @@
-const r=require('express').Router(),c=require('../controllers/cropController'),{protect}=require('../middleware/auth');r.use(protect);r.get('/',c.list);r.get('/:id',c.get);r.post('/',c.create);r.put('/:id',c.update);r.delete('/:id',c.remove);module.exports=r;
+const r = require("express").Router(),
+  c = require("../controllers/cropController"),
+  { protect } = require("../middleware/auth");
+r.use(protect);
+r.get("/", c.list);
+r.get("/:id", c.get);
+r.post("/", c.create);
+r.put("/:id", c.update);
+r.delete("/:id", c.remove);
+module.exports = r;

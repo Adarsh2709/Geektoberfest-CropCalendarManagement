@@ -1,1 +1,11 @@
-const r=require('express').Router(),c=require('../controllers/activityController'),{protect}=require('../middleware/auth');r.use(protect);r.get('/',c.list);r.get('/:id',c.get);r.post('/',c.create);r.put('/:id',c.update);r.delete('/:id',c.remove);r.patch('/:id/complete',c.complete);module.exports=r;
+const r = require("express").Router(),
+  c = require("../controllers/activityController"),
+  { protect } = require("../middleware/auth");
+r.use(protect);
+r.get("/", c.list);
+r.get("/:id", c.get);
+r.post("/", c.create);
+r.put("/:id", c.update);
+r.delete("/:id", c.remove);
+r.patch("/:id/complete", c.complete);
+module.exports = r;
